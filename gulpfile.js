@@ -4,11 +4,19 @@ const svgSprite = require('gulp-svg-sprite')
 const config = {
   mode: {
     symbol: {
-      example: true,
+      example: {
+        dest: '../demo.html'
+      },
       sprite: '../sprite.svg'
     },
   },
   shape: {
+    dimension: { // Dimension related options
+      maxWidth: 200, // Max. shape width
+      maxHeight: 200, // Max. shape height
+      precision: 2, // Floating point precision
+      attributes: false, // Width and height attributes on embedded shapes
+    },
     spacing: { // Add padding
       padding: 10
     },
