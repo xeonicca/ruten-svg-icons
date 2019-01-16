@@ -1,0 +1,19 @@
+{
+  "name": "ruten-svg-icons",
+  "version": "1.0.0",
+  "description": "ruten icon for vue icon component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.ruten.tw:frontend/ruten-svg-icons.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-svg-sprite": "^1.5.0",
+  }
+}
