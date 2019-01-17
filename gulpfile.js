@@ -2,6 +2,13 @@ const gulp = require('gulp')
 const svgSprite = require('gulp-svg-sprite')
 
 const config = {
+  svg: { // General options for created SVG files
+    xmlDeclaration: false, // Add XML declaration to SVG sprite
+    doctypeDeclaration: true, // Add DOCTYPE declaration to SVG sprite
+    namespaceIDs: true, // Add namespace token to all IDs in SVG shapes
+    namespaceClassnames: false, // Add namespace token to all CSS class names in SVG shapes
+    dimensionAttributes: false // Width and height attributes on the sprite
+  },
   mode: {
     symbol: {
       example: {
@@ -25,6 +32,11 @@ const config = {
         plugins: [
           {transformsWithOnePath: true},
           {inlineStyles: {onlyMatchedOnce: false} },
+          {removeAttrs: {attrs: 'data-name' } },
+          {removeDimensions: true},
+          {mergePaths: true},
+          {convertShapeToPath: true},
+          {convertPathData: true}
         ]
       }
     }]
