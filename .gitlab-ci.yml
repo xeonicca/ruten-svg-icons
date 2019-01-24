@@ -17,7 +17,7 @@ pages:
   - mkdir public
   - cp -r dist/* public
   - cp index.html public
-  - lftp sftp://$USERNAME:$PASSWORD@$HOST -c "mirror -Rev dist/ /home/webuser/bid/www/www/images/icons/  --ignore-time --parallel=10/"
+  - lftp sftp://$USERNAME:$PASSWORD@$HOST -e "mirror -Rev dist/ /home/webuser/bid/www/www/images/icons/  --ignore-time --parallel=10/;quit;"
   artifacts:
     paths:
     - public
