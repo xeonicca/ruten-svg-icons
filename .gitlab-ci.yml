@@ -17,6 +17,7 @@ pages:
   - mkdir public
   - cp -r dist/* public
   - cp index.html public
+  - lftp -c "set ftp:ssl-allow no; open -u webuser,99378bf0 172.30.0.41; mirror -Rev dist/ /home/webuser/bid/www/www/images/icons/  --ignore-time --parallel=10/"
   artifacts:
     paths:
     - public
