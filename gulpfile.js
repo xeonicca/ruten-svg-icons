@@ -25,7 +25,7 @@ const config = {
       attributes: false, // Width and height attributes on embedded shapes
     },
     spacing: { // Add padding
-      padding: 10
+      padding: 12
     },
     transform: [{
       svgo: {
