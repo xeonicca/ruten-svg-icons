@@ -1,4 +1,9 @@
+// import Vue from 'Vue'
 import Icon from './Icon.vue'
-import Vue from 'Vue'
 
-Vue.components(Icon)
+const request = require.context('./icons', false, /\.svg$/);
+
+// require every module
+request.keys().forEach(request);
+
+Vue.component('icon', Icon);
